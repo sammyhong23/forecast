@@ -59,7 +59,9 @@ def call_laundry_api():
 
     print(len(set(df[' id'])))
     print(len(room_list))
-
+    
+    df2 = df[df[' id'].isin(room_list[0])]
+    #plt.plot(df2[' time_remaining'])
 
 call_laundry_api()
 
